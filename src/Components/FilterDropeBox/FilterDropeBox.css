@@ -1,0 +1,13 @@
+.filterdrope-container{
+    width: 100px;
+    height: 220px;
+    border: 1px solid blue;
+    position: relative;
+    left: -8px;
+    top: 127px;
+}
+.filterdrope-container-main{
+    width:90%;
+    height: 90%;
+    background-color: rgba(10, 237, 237, 0.603);
+}
