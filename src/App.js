@@ -3,7 +3,7 @@ import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 
 import AllRoute from './Components/Route/AllRoute';
-import LanguageSel from "./Components/LangSelector/LanguageSel"
+
 
 function App() {
   return (

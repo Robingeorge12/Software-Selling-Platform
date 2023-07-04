@@ -2,9 +2,8 @@ import React from "react";
 import "./Navbar.css";
 import { AiFillCaretDown, AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegBell, FaRegHeart, FaRegUserCircle } from "react-icons/fa";
-// import { FaRegBell } from "react-icons/fa";
-// import { FaRegBell } from "react-icons/fa";
-// import { FaRegBell } from "react-icons/fa";
+
+import GoogleTranslate from '../GoogleTranslate/GoogleTranslate';
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,13 +11,12 @@ import NavbarLang from "../NavbarLang/NavbarLang";
 import NavbarMenu from "../NavbarMenu/NavbarMenu";
 import Language from "../Language/Language";
 
-import { useTranslation } from "react-i18next";
-import LanguageSel from "../LangSelector/LanguageSel";
+
 import CustomBuyMenu from "../CustomBuyMenu/CustomBuyMenu";
 import CustomSellMenu from "../CustomSellMenu/CustomSellMenu";
+import SearchPage from "../SearchPage/SearchPage";
 
 function Navbar() {
-  const { t } = useTranslation();
 
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
@@ -27,10 +25,18 @@ function Navbar() {
   const [login, setLogin] = useState(false);
   const [logout, setLogout] = useState(true);
   const [customBuy, setCustomBuy] = useState(false);
-  const [customSell,setCustomSell] = useState(false)
+  const [customSell, setCustomSell] = useState(false);
 
-  const [customSellMouseEnter,setCustomSellMouseEnter] = useState(false)
-const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
+  const [search,setSearch] = useState("")
+
+  const handleSearch = (e)=>{
+    // console.log(e.target.value);
+    setSearch(e.target.value)
+  }
+  const handleName = (value)=>{
+    // setSearch("")
+    setSearch(value)
+  }
 
   const handleBuy = (e) => {
     console.log(e.target.value);
@@ -64,7 +70,7 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
             onClick={() => setCustomBuy(!customBuy)}
           >
             <p className="navbarcontainer-div1-box2-select1-buy">
-              {t("Buy")}
+              Buy
               {customBuy && (
                 <div>
                   <CustomBuyMenu />
@@ -84,12 +90,16 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
             className="navbarcontainer-div1-box2-select2"
             onMouseEnter={() => setShow2(true)}
             onMouseLeave={() => setShow2(false)}
-            onClick={()=>setCustomSell(!customSell)}
-
+            onClick={() => setCustomSell(!customSell)}
           >
             <p className="navbarcontainer-div1-box2-select2-sell">
-              {t("Sell")}
-             { customSell && <div> <CustomSellMenu /> </div>}
+              Sell
+              {customSell && (
+                <div>
+                  {" "}
+                  <CustomSellMenu />{" "}
+                </div>
+              )}
             </p>
             <div className="navbarcontainer-div1-box2-select2-icondiv">
               {" "}
@@ -99,7 +109,6 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
               <div className="navbarcontainer-div1-box2-select2-hover"></div>
             )}
           </div>
-          
 
           <div
             className="navbarcontainer-div1-box2-name1"
@@ -109,7 +118,7 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
             {" "}
             <Link to="" className="navbarcontainer-div1-box2-name1-link1">
               {" "}
-              {t("Post Requests")}
+              Post Requests
             </Link>
             {show3 && (
               <div className="navbarcontainer-div1-box2-name1-hover3"></div>
@@ -122,7 +131,7 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
           >
             {" "}
             <Link to="" className="navbarcontainer-div1-box2-name1-link2">
-              {t("Corporate Solutions")}
+              Corporate Solutions
             </Link>
             {show4 && (
               <div className="navbarcontainer-div1-box2-name2-hove4"></div>
@@ -135,10 +144,14 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
         <div className="navbar-container-div2-search">
           <input
             type="text"
+            value={search}
+            onChange={handleSearch}
             className="navbar-container-div2-search-ip"
-            placeholder={t("Search") + "...."}
+            placeholder="Search..."
+           
           />
         </div>
+        { search && <SearchPage search = {search}  handleSearch={handleName} /> }
         {/* {belll icon..................} */}
 
         {login && (
@@ -203,7 +216,7 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
         {logout && (
           <Link to="" className="navbar-container-div2-loginlink">
             {" "}
-            <div className="navbar-container-div2-logindiv">{t("Log In")}</div>
+            <div className="navbar-container-div2-logindiv">Log In</div>
           </Link>
         )}
         {/* { signup.....................................................} */}
@@ -211,7 +224,7 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
           <Link to="" className="navbar-container-div2-signuplink">
             {" "}
             <div className="navbar-container-div2-signupdiv">
-              {t("Sign Up")}
+              Sign Up
             </div>
           </Link>
         )}
@@ -220,40 +233,14 @@ const [customSellMouseLeave,setCustomSellMouseLeave] = useState(false)
 
         <div className="navbar-container-div2-lang">
           <div className="navbar-container-div2-lang-drope">
+            <GoogleTranslate />
+         
             {/* <NavbarLang /> */}
-            {/* <Language /> */}
-            <LanguageSel />
+            {/* <Language /> */} 
+            {/* <LanguageSel /> */}
           </div>
-          {/* <div className="navbar-container-div2-lang-namediv">
-            <p className="navbar-container-div2-lang-name"></p>
-          </div> */}
-          {/* <div className="navbar-container-div2-lang-select">
-            <select id="">
-              <option value="">
-                <div className="navbar-container-div2-lang-select-div1">
-                  <div className="navbar-container-div2-lang-select-div1-namediv">
-                    <p className="navbar-container-div2-lang-select-div1-name">
-                      English
-                    </p>
-                  </div>
-                  <div className="navbar-container-div2-lang-select-div1-imgdiv">
-                    <img
-                      src={
-                        "https://gifscenter.com/wp-content/uploads/2017/05/UK-Flag.gif"
-                      }
-                      className="navbar-container-div2-lang-select-div1-img"
-                      alt=""
-                    />
-                  </div>
-                </div>{" "}
-              </option>
-
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
-          </div> */}
+        
+   
           <div className="navbar-container-div2-lang-icondiv">
             <AiFillCaretDown className="navbar-container-div2-lang-icon" />
           </div>

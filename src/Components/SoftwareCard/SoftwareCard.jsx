@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
 
-import { useTranslation } from "react-i18next";
+
 
 const data = [
   {
@@ -55,21 +55,21 @@ price:1145.67
   ];
 
 function SoftwareCard() {
-  const { t } = useTranslation();
+
 
   const len = data.length
-  console.log(len)
+  // console.log(len)
   const handleClick = ()=>{
-    console.log("len")
+    // console.log("len")
   }
   
   return (
     <div className="softwarecard-container">
       <div className="softwarecard-container-div1">
         <p className="softwarecard-container-div1-p1">
-          {t("Weekly")}{" "}
+          Weekly
           <span className="softwarecard-container-div1-p1-s1">
-            {t("Free Source Codes")}
+            Free Source Codes
           </span>
         </p>
       </div>
@@ -77,9 +77,9 @@ function SoftwareCard() {
         <p className="softwarecard-container-div2-p1">
           {" "}
           <span className="softwarecard-container-div2-p1-s1">
-            {t("Download")}{" "}
+            Download
           </span>{" "}
-          {t("amazing weekly free products")+"."}
+          amazing weekly free products.
         </p>
       </div>
 
@@ -132,17 +132,17 @@ breakpoints={{
                 </div>
                 <div className="softwarecard-container-div3-swiper-slide-children2">
                   <p className="softwarecard-container-div3-swiper-slide-children2-p1">
-                    {t("weekly free")}
+                    weekly free
                   </p>
                 </div>
                 <div className="softwarecard-container-div3-swiper-slide-children3">
                   <p className="softwarecard-container-div3-swiper-slide-children3-p1">
-                  {t("Architecture and Interiors Website Template")}
+                  Architecture and Interiors Website Template
                   </p>
                 </div>
                 <div className="softwarecard-container-div3-swiper-slide-children4">
                   <p className="softwarecard-container-div3-swiper-slide-children4-p1">
-                  {t("This is fully completed project built from Laravel framework VueJS")+"."} 
+                  This is fully completed project built from Laravel framework VueJS. 
                   </p>
                 </div>
 
@@ -152,7 +152,7 @@ breakpoints={{
                   </div>
                   <div className="softwarecard-container-div3-swiper-slide-children5-lang">
                     <p className="softwarecard-container-div3-swiper-slide-children5-lang-p1">
-                    {t(el.lan)}
+                    el.lan
                     </p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ breakpoints={{
                   </div>
                   <div className="softwarecard-container-div3-swiper-slide-children6-lang">
                     <p className="softwarecard-container-div3-swiper-slide-children6-lang-p1">
-                   {t("Blockchain,Criptocurrency")}
+                   Blockchain,Criptocurrency
                     </p>
                   </div>
                 </div>
@@ -173,22 +173,22 @@ breakpoints={{
                   </div>
                   <div className="softwarecard-container-div3-swiper-slide-children7-lang">
                     <p className="softwarecard-container-div3-swiper-slide-children7-lang-p1">
-                    {t("Content,Data,Technology,Telecommunication,Tools")}
+                    Content,Data,Technology,Telecommunication,Tools
                     </p>
                   </div>
                 </div>
                 <div className="softwarecard-container-div3-swiper-slide-children8">
                   <p className="softwarecard-container-div3-swiper-slide-children8-p1">
-                    {t("added by")}
+                    added by
                   </p>
                   <span className="softwarecard-container-div3-swiper-slide-children8-p1-s1">
-                  {t("Hangsharaj1888")}
+                  Hangsharaj1888
                   </span>
                 </div>
                 <div className="softwarecard-container-div3-swiper-slide-children9">
                   <button className="softwarecard-container-div3-swiper-slide-children9-btn">
                     {" "}
-                    {t("Download")}{" "}
+                    Download{" "}
                   </button>
                 </div>
                 <div className="softwarecard-container-div3-swiper-slide-children10">

@@ -1,0 +1,23 @@
+.searchprod-container {
+  width: 98vw;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: auto;
+}
+
+.searchprod-container-div1 {
+  width: 25vw;
+  height: 100vh;
+  border: 1px solid green;
+ 
+}
+
+.searchprod-container-div2 {
+  width: 71vw;
+  height: 100vh;
+  border: 1px solid blue;
+}
