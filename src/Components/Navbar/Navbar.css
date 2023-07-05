@@ -69,13 +69,13 @@
   font-family: sans-serif;
 }
 .navbarcontainer-div1-box2-select1-hover {
-  width: 60px;
+  width: 56px;
   height: 4px;
   background-color: #17a2b8;
   /* 2,63,63 */
   position: fixed;
   margin-top: 48px;
-  margin: 48px 0px 0px -1px;
+  margin: 48px 0px 0px -32px;
 }
 
 /* div.navbarcontainer-div1-box2-select1:hover{
@@ -108,13 +108,13 @@
 .navbarcontainer-div1-box2-select2-icon {
 }
 .navbarcontainer-div1-box2-select2-hover {
-  width: 60px;
+  width: 52px;
   height: 4px;
   background-color: #17a2b8;
   /* 2,63,63 */
   position: fixed;
   margin-top: 48px;
-  margin: 48px 0px 0px 0px;
+  margin: 48px 0px 0px -30px;
 }
 
 .navbarcontainer-div1-box2-name1 {
@@ -152,7 +152,7 @@
   background-color: #17a2b8;
   position: fixed;
   margin-top: 48px;
-  margin: 48px 0px 0px 0px;
+  margin: 48px 0px 0px -30px;
 }
 .navbarcontainer-div1-box2-name2-hove4 {
   width: 147px;
@@ -160,7 +160,7 @@
   background-color: #17a2b8;
   position: fixed;
   margin-top: 48px;
-  margin: 48px 0px 0px 1px;
+  margin: 48px 0px 0px -30px;
 }
 
 /* {part 2 navbar...........................} */

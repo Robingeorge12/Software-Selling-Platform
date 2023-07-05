@@ -5,7 +5,7 @@ import { filterSearch, getData } from "../../Redux/app/action";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 
-function SearchPage({ search,handleSearch }) {
+function SearchPage({ search, handleSearch }) {
   const dispatch = useDispatch();
   const [name, setName] = useState();
   const [show, setShow] = useState(false);
@@ -22,8 +22,6 @@ function SearchPage({ search,handleSearch }) {
 
   const searchNames = (search) => {
     const arr = data?.data?.filter((filt) => {
-      // return filt
-      // console.log(filt)
       return filt.category === search;
     });
     setName(arr || []);
@@ -38,8 +36,8 @@ function SearchPage({ search,handleSearch }) {
 
   const handleFilterValue = (value) => {
     // we have passed value to seach tag through a function
-    console.log(value)
-    handleSearch(value)
+    console.log(value);
+    handleSearch(value);
   };
 
   // useEffect(() => {
@@ -48,27 +46,32 @@ function SearchPage({ search,handleSearch }) {
 
   return (
     <div className="search-container">
-      {data?.data?.filter((fil)=>{
-const searchVal = search.toLowerCase()
-const dataName = fil.category.toLowerCase()
+      {data?.data
+        ?.filter((fil) => {
+          const searchVal = search.toLowerCase();
+          const dataName = fil.category.toLowerCase();
 
-return searchVal &&  dataName.startsWith(searchVal) && dataName!==searchVal;
-
-      }).map((el, i) => (
-        <div
-          key={i}
-          onMouseEnter={() => setShow(true)}
-          onMouseLeave={() => setShow(false)}
-          className={`search-link ${show ? "active" : ""}`}
-          onClick={() =>handleFilterValue(el.category)}
-        >
-          {" "}
-          <p style={{}}>{el.category}</p>
-          <div className="search-icondiv">
-            <BsSearch className="search-icon" />
+          return (
+            searchVal &&
+            dataName.startsWith(searchVal) &&
+            dataName !== searchVal
+          );
+        })
+        .map((el, i) => (
+          <div
+            key={i}
+            onMouseEnter={() => setShow(true)}
+            onMouseLeave={() => setShow(false)}
+            className={`search-link ${show ? "active" : ""}`}
+            onClick={() => handleFilterValue(el.category)}
+          >
+            {" "}
+            <p style={{}}>{el.category}</p>
+            <div className="search-icondiv">
+              <BsSearch className="search-icon" />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }

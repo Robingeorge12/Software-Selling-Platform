@@ -16,15 +16,15 @@ export const getData = () => (dispatch) => {
     });
 };
 
-export const filterSearch = (search) => (dispatch) => {
-  axios
-    .get(
-      `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?filter=${search}`
-    )
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((er) => {
-      console.log(er);
-    });
-};
+// export const filterSearch = (search) => (dispatch) => {
+//   axios
+//     .get(
+//       `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?filter=${search}`
+//     )
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((er) => {
+//       console.log(er);
+//     });
+// };
