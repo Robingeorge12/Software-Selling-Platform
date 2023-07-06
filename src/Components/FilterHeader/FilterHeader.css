@@ -1,5 +1,5 @@
 .filterhead-container {
-  width: 100vw;
+  width: 98vw;
   height: 48px;
   /* border: 1px solid red; */
   box-shadow: lightcyan 0px 20px 25px -5px, lightcyan 0px 10px 10px -5px;
@@ -237,6 +237,9 @@
         background-color: lightcyan;
         margin-left: 2px;
     }
+    .filterhead-container-main-div2-default{
+      display: none;
+    }
     .filterhead-container-main-div2 {
       width: 100px;
       height: 30px;
@@ -260,7 +263,7 @@
   .filterhead-container-main {
     width: 100vw;
     height: 48px;
-    border: 1px solid rgb(16, 144, 167);
+    /* border: 1px solid rgb(16, 144, 167); */
   }
 
   .filterhead-container-main-div1 {
@@ -340,5 +343,9 @@
     width: 20px;
     height: 20px;
     color: #17a2b8;
+  }
+  .filterhead-container-main-div2-default {
+    display: flex;
+    position: static !important;
   }
 }

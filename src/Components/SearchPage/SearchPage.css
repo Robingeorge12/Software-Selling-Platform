@@ -36,3 +36,47 @@ div.search-link:hover{
 .search-icondiv{
     /* padding-right: 10px; */
 }
+@media screen and (max-width:1440px){
+
+}
+
+@media screen and (max-width:1024px){
+
+    .search-container {
+        width: 37vw;
+        height: auto;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: 65px;
+        left: 348px;
+        /* background-color: rgba(255, 255, 255, 0.584); */
+    }
+
+}
+
+@media screen and (max-width:768px){
+
+    .search-container {
+        width: 37vw;
+        height: auto;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: 65px;
+        left: 281px;
+        /* background-color: rgba(255, 255, 255, 0.584); */
+    }
+
+}
+
+@media screen and (max-width:426px){
+    .search-container {
+        width: 56vw;
+        height: auto;
+        /* border: 1px solid black; */
+        position: absolute;
+        top: 65px;
+        left: 171px;
+        /* background-color: rgba(255, 255, 255, 0.584); */
+    }
+
+}

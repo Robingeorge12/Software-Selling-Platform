@@ -250,3 +250,12 @@
     height: 50px;
     border: 1px solid green;
   }
+
+
+
+  @media screen and (max-width: 426px){
+
+    .searchfilt-container{
+        display: none;
+    }
+  }
